@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_goal
   before_action :set_task, only: [:show, :update, :destroy]
 
-
+# TESTING GIT
   # GET /tasks
   def index
     # @tasks = @goal.tasks.all
