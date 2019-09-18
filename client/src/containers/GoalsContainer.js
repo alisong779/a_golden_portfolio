@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Container } from 'semantic-ui-react';
 import Goals from '../components/Goals/Goals'
 import GoalInput from '../components/Goals/GoalInput'
 import { fetchGoals, deleteGoal } from '../actions/goalsActions'
@@ -12,10 +13,10 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
 
     render() {
       return (
-        <div>
+        <Container>
           <GoalInput />
           <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/>
-        </div>
+        </Container>
       )
     }
   }

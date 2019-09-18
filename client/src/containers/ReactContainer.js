@@ -10,7 +10,6 @@ class ReactContainer extends React.Component {
         <Navigation>
             <NavLink to="/Goals">View Your Goals</NavLink>
         </Navigation>
-      <h1>React Container</h1>
       <GoalsContainer />
       </div>
     )

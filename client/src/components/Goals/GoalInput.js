@@ -30,7 +30,7 @@ class GoalInput extends Component {
   render() {
     return(
       <Form inverted className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
-        <h5>New Goal</h5>
+        <h1>Create New Goal</h1>
         <Form.Field>
           <label className="form-label">Goal Title</label>
           <input id="title" required value={this.state.title} onChange={(e) => this.handleChange(e)} />
