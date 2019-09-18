@@ -13,8 +13,8 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
     render() {
       return (
         <div>
-          <Goals goals={this.props.goals} />
           <GoalInput />
+          <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/>
         </div>
       )
     }
