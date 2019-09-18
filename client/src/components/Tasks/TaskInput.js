@@ -28,10 +28,10 @@ class TaskInput extends Component {
 
        <Form.Field>
          <label className="form-label">Add Task</label>
-         <input placeholder="Tasks to Meet My Goals" id="name" required value={this.state.name} onChange={(e) =>this.handleChange(e)} />
+         <input id="name" required value={this.state.name} onChange={(e) =>this.handleChange(e)} />
        </Form.Field>
 
-       <Button size='mini' type="submit">Submit</Button>
+       <Button size='mini' type="submit">Add Task</Button>
      </Form>
     )
   }
