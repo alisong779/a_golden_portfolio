@@ -1,6 +1,6 @@
 
 //GOAL TASKS
-export const fetchGoalObjectives = goalId => {
+export const fetchGoalTasks = goalId => {
   return dispatch => {
     fetch(`/api/goals/${goalId}/tasks`)
       .then(response => response.json())
@@ -10,7 +10,7 @@ export const fetchGoalObjectives = goalId => {
           goalId
         }
         dispatch({
-            type: 'FETCH_OBJECTIVES',
+            type: 'FETCH_TASKS',
             payload: result
         })
       })
@@ -35,13 +35,13 @@ export const addTask = ( taskInput, goalId ) => {
       .then(response => response.json())
       .then(task => {
         let result = {task, goalId}
-        dispatch({type: 'CREATE_OBJECTIVE', payload: result})
+        dispatch({type: 'CREATE_TASK', payload: result})
       })
       .catch(err => err)
   }
 }
 
-//DELETE TASK 
+//DELETE TASK
 export const deleteTask = id => {
   let data = {
     method: 'DELETE',
@@ -54,7 +54,7 @@ export const deleteTask = id => {
     fetch(`/tasks/${ id }`, data)
       .then(response => response.json())
       .then(task => dispatch({
-        type: 'DELETE_OBJECTIVE',
+        type: 'DELETE_TASK',
         payload: task
       }))
       .catch(err => err)

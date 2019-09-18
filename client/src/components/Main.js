@@ -6,7 +6,10 @@ import Contact from './Portfolio/Contact'
 import Projects from './Portfolio/Projects'
 import Resume from './Portfolio/Resume'
 import Goals from './Goals/Goals'
+import GoalsContainer from '../containers/GoalsContainer';
+import GoalInput from '.Goals/GoalInput';
 import { connect } from 'react-redux'
+import TasksContainer from '../containers/TasksContainer';
 
   class Main extends Component {
     render(){
@@ -18,6 +21,7 @@ import { connect } from 'react-redux'
           <Route path="/projects" component={ Projects } />
           <Route path="/resume" component={ Resume } />
           <Route path="/goals" component={ Goals } />
+          <Route exact path='/goals/:goalId/tasks' component={TasksContainer} />
         </Switch>
       )
     }
