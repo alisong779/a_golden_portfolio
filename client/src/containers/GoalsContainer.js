@@ -22,9 +22,10 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
 
 const mapStateToProps = (state) => {
   return {
-    goals: state.goalsData
+    goals: state.goals.goalsData
   }
 }
+
 
 const mapDispatchToProps = dispatch => ({
   fetchGoals: () => dispatch(fetchGoals()),

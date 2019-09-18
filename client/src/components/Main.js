@@ -5,6 +5,7 @@ import About from './Portfolio/About'
 import Contact from './Portfolio/Contact'
 import Projects from './Portfolio/Projects'
 import Resume from './Portfolio/Resume'
+import Goals from './Goals/Goals'
 import { connect } from 'react-redux'
 
   class Main extends Component {
@@ -16,6 +17,7 @@ import { connect } from 'react-redux'
           <Route path="/contact" component={ Contact } />
           <Route path="/projects" component={ Projects } />
           <Route path="/resume" component={ Resume } />
+          <Route path="/goals" component={ Goals } />
         </Switch>
       )
     }

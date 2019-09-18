@@ -9,6 +9,7 @@ export default function goalReducer(state = {
         case 'LOADING_GOALS':
           return {...state, loading: true}
         case 'FETCH_GOALS':
+          console.log('reducer')
           return {...state, loading: false, goalsData: action.payload}
         case 'FETCH_GOAL':
           return {...state, loading: false, goalData: action.payload}

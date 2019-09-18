@@ -1,12 +1,13 @@
-import React from 'react';
-import Goal from './Goal';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import Goal from './Goal'
+
 
 const Goals = props => {
-  // const goalsData = goals.map(goal => <Goal key={goal.id} goal={goal} {...goal}/>)
+  const goalsList = props.goals.map(goal => <Goal key={goal.id} goal={goal} {...goal} deleteGoal={props.deleteGoal}/>)
   return (
-      <h4>Goals Component from Goals Container</h4>
-  );
-};
+      {goalsList}
+  )
+}
 
-export default connect()(Goals);
+export default Goals;

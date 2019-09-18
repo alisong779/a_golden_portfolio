@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactContainer from '../../containers/ReactContainer'
-import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button, CardMenu, IconButton } from 'react-mdl'
+import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button } from 'react-mdl'
 
 class Projects extends React.Component {
   constructor(props){
