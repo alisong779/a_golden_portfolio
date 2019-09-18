@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
+import Main from './components/Main'
+import { NavLink } from 'react-router-dom';
+import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl'
+import { connect } from 'react-redux'
 
 class App extends Component {
-
-  componentDidMount(){
-    fetch('/api/goals')
-      .then(resp => resp.json())
-      .then(json => console.log(json))
-  }
-
   render(){
     return (
-      <div className="App">
-        Hello World
+      <div className="demo-big-content">
+        <Layout>
+        <Header className="header-color" title="A. Golden Portfolio" scroll>
+            <Navigation>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/resume">Resume</NavLink>
+                <NavLink to="/projects">Projects</NavLink>
+            </Navigation>
+        </Header>
+        <Content>
+            <Main />
+        </Content>
+    </Layout>
       </div>
     );
   }
+  }
 
-}
-
-export default App;
+export default connect()(App)
