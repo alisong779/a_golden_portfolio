@@ -7,7 +7,7 @@ import Projects from './Portfolio/Projects'
 import Resume from './Portfolio/Resume'
 import Goals from './Goals/Goals'
 import GoalsContainer from '../containers/GoalsContainer';
-import GoalInput from '.Goals/GoalInput';
+import GoalInput from './Goals/GoalInput';
 import { connect } from 'react-redux'
 import TasksContainer from '../containers/TasksContainer';
 

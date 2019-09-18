@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { addTask, deleteTask, fetchGoalTasks } from '../actions/tasksActions'
 import { connect } from 'react-redux'
 import { fetchGoal } from '../actions/goalsActions'
+import Tasks from '../components/Tasks/Tasks';
+import TaskInput from '../components/Tasks/TaskInput';
 
 class TasksContainer extends Component {
   componentDidMount() {
