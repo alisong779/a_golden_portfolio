@@ -15,8 +15,8 @@ const Tasks = (props) => {
     return (
     <div className="tasks-box">
       <h1>{props.goal.title}</h1>
-      <label><strong>GOALS</strong></label>
-      <p>{props.goal.description}</p>
+      <label><strong>GOAL</strong></label>
+      {props.goal.description}
       <strong>TASKS</strong>
       <ul>
         {tasksList}

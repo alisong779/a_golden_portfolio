@@ -27,7 +27,7 @@ class TasksContainer extends Component {
   }
 }
 const mapStateToProps = state => ({
-  tasks: state.tasks.tasksData,
+  tasks: state.tasks.taskData,
   goal: state.goals.goalData
 })
 
