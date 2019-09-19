@@ -3,6 +3,7 @@ import { Button, Form } from 'semantic-ui-react';
 import { addGoal } from '../../actions/goalsActions';
 import { connect } from 'react-redux'
 
+
 class GoalInput extends Component {
   constructor() {
     super()
@@ -29,7 +30,7 @@ class GoalInput extends Component {
 
   render() {
     return(
-      <Form inverted className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
+      <Form className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
         <h1>Create New Goal</h1>
         <Form.Field>
           <label className="form-label">Goal Title</label>
@@ -43,6 +44,7 @@ class GoalInput extends Component {
 
         <Button type="submit">Add Goal</Button>
       </Form>
+
     )
   }
 }

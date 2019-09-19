@@ -1,13 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Button, Container, Card } from 'semantic-ui-react';
 
 
-const Goal = ({ title, deleteGoal, id }) => {
+const Goal = ({ title, description, deleteGoal, id }) => {
   return(
-    <div className="goal">
-      <NavLink key={id} to={`/goals/${id}/tasks`}><h3>{title}</h3></NavLink>
-      <button className="delete-button" onClick={() => deleteGoal(id)}>Delete</button>
-    </div>
+    <Card>
+    <Card.Content>
+      <Card.Header><NavLink key={id} to={`/goals/${id}/tasks`}>{title}</NavLink></Card.Header>
+      <Card.Description>
+        {description}
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <Button variant="primary" className="delete-button" onClick={() => deleteGoal(id)}>Delete</Button>
+    </Card.Content>
+  </Card>
   )
 }
 
