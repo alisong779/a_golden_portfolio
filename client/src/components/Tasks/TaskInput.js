@@ -24,14 +24,12 @@ class TaskInput extends Component {
 
   render() {
     return (
-      <Form inverted className="new-task-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
-
+      <Form className="new-task-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
        <Form.Field>
          <label className="form-label">Add Task</label>
          <input id="name" required value={this.state.name} onChange={(e) =>this.handleChange(e)} />
        </Form.Field>
-
-       <Button size='mini' type="submit">Add Task</Button>
+       <Button type="submit">Add Task</Button>
      </Form>
     )
   }

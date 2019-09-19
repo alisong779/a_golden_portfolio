@@ -7,7 +7,7 @@ const Goal = ({ title, description, deleteGoal, id }) => {
   return(
     <Card>
     <Card.Content>
-      <Card.Header><NavLink key={id} to={`/goals/${id}/tasks`}>{title}</NavLink></Card.Header>
+      <Card.Header><NavLink key={id} to={`/goal/${id}/tasks`}>{title}</NavLink></Card.Header>
       <Card.Description>
         {description}
       </Card.Description>
