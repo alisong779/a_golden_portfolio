@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 import Goal from './Goal'
-import { Container } from 'semantic-ui-react';
 
 
-const Goals = props => {
-  const goalsList = props.goals.map(goal => <Goal key={goal.id} goal={goal} {...goal} deleteGoal={props.deleteGoal}/>)
-  return (
-    <Container>
-      <h1>My Developer Goals</h1>
-      {goalsList}
-    </Container>
-  )
+class Goals extends Component {
+  render() {
+    const { goals, deleteGoal } = this.props
+
+    const goalsIndex = goals.map(goal => {
+      return (
+        <Goal key={goal.id} goal={goal} {...goal} deleteGoal={deleteGoal}/>
+      )
+  })
+    return (
+      <ul>
+        {goalsIndex}
+      </ul>
+
+    )
+  }
 }
-
 export default Goals;

@@ -1,6 +1,7 @@
 export default function tasksReducer(state = {
   loading: false,
-  taskData: []
+  taskData: [],
+  tasksData: []
 },action){
   switch(action.type){
     case 'FETCH_TASKS':

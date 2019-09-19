@@ -19,7 +19,7 @@ class GoalInput extends Component {
     })
   }
 
-  handleOnSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
     this.props.addGoal(this.state);
     this.setState({
@@ -30,16 +30,23 @@ class GoalInput extends Component {
 
   render() {
     return(
-      <Form className="new-goal-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
+      <Form className="new-goal-form" onSubmit={(e) =>this.handleSubmit(e)}>
         <h1>Create New Goal</h1>
         <Form.Field>
           <label className="form-label">Goal Title</label>
-          <input id="title" required value={this.state.title} onChange={(e) => this.handleChange(e)} />
+          <input
+            id="title"
+            required value={this.state.title}
+            onChange={(e) => this.handleChange(e)}
+            />
         </Form.Field>
 
         <Form.Field>
           <label className="form-label">Description</label>
-          <textarea id="description" required value={this.state.description} onChange={this.handleChange} />
+          <textarea
+            id="description"
+            required value={this.state.description}
+            onChange={this.handleChange} />
         </Form.Field>
 
         <Button type="submit">Add Goal</Button>
