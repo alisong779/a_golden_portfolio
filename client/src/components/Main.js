@@ -21,7 +21,7 @@ import TasksContainer from '../containers/TasksContainer';
           <Route path="/projects" component={ Projects } />
           <Route path="/resume" component={ Resume } />
           <Route path="/goals" component={ Goals } />
-          <Route exact path='/goals/:goalId/tasks' component={TasksContainer} />
+          <Route exact path="/goal/:goalId/tasks" component={ TasksContainer } />
         </Switch>
       )
     }
