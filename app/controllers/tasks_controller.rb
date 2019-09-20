@@ -1,9 +1,10 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :update, :destroy]
+  # before_action :set_task, only: [:show, :update, :destroy]
 
 # TESTING GIT
   # GET /tasks
   def index
+    @goal = Goal.find(params[:goal_id])
     @tasks = @goal.tasks.all
     render json: @tasks
   end
@@ -38,9 +39,9 @@ class TasksController < ApplicationController
   end
 
   private
-    def set_task
-      @task = @goal.tasks.find_by(id: params[:id])
-    end
+    # def set_task
+    #   @task = @goal.tasks.find_by(id: params[:id])
+    # end
 
     def task_params
       params.require(:task).permit(:name, :completed)

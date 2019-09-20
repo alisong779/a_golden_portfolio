@@ -12,7 +12,7 @@ const Task = ({ task, deleteTask }) => {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <Button variant="primary" onClick={() => deleteTask(task.id)}>Delete</Button>
+      <Button variant="primary" onClick={() => deleteTask(task.goal_id, task.id)}>Delete</Button>
     </Card.Content>
   </Card>
   )

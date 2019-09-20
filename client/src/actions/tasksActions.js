@@ -23,7 +23,7 @@ export const addTask = ( task, id ) => {
 }
 
 //DELETE TASK
-export const deleteTask = id => {
+export const deleteTask = ( goalId, id ) => {
   let data = {
     method: 'DELETE',
     headers: {
@@ -32,7 +32,7 @@ export const deleteTask = id => {
     }
   }
   return dispatch => {
-    fetch(`/tasks/${id}`, data)
+    fetch(`api/goals/${goalId}/tasks/${id}`, data)
       .then(response => response.json())
       .then(task => dispatch({
         type: 'DELETE_TASK',
