@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactContainer from '../../containers/ReactContainer'
+import GoalsContainer from '../../containers/GoalsContainer'
 import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button } from 'react-mdl'
 
 class Projects extends React.Component {
@@ -12,20 +12,19 @@ class Projects extends React.Component {
     if(this.state.activeTab === 0){
       return(
         <div >
-          <ReactContainer />
+          <GoalsContainer />
         </div>
       )
     }else if(this.state.activeTab === 1){
       return (
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>JavaScript Projects</CardTitle>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Projects</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Mauris sagittis pellentesque lacus eleifend lacinia...
+              Added a Comments section to my Rails App that renders async JavaScript
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button href="https://github.com/alisong779/golden-recipes-2" colored>Github</Button>
             </CardActions>
           </Card>
         </div>
@@ -34,13 +33,12 @@ class Projects extends React.Component {
       return (
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Ruby on Rails Projects</CardTitle>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Projects</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Mauris sagittis pellentesque lacus eleifend lacinia...
+              Rails Recipe Keeper App
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button href="https://github.com/alisong779/golden_recipes" colored>Github</Button>
             </CardActions>
           </Card>
         </div>

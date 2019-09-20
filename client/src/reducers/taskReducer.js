@@ -1,6 +1,5 @@
-export default function tasksReducer(state = {
+export default function taskReducer(state = {
   loading: false,
-  taskData: [],
   tasksData: []
 },action){
   switch(action.type){

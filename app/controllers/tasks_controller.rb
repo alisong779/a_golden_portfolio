@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-  before_action :set_goal
   before_action :set_task, only: [:show, :update, :destroy]
 
 # TESTING GIT
@@ -16,7 +15,7 @@ class TasksController < ApplicationController
 
   # POST /tasks
   def create
-    @task = @goal.tasks.create(task_params)
+    @task = Task.create(task_params)
 
     if @task.save
       render json: @task, status: :created, location: @task
@@ -41,16 +40,10 @@ class TasksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_task
-      @task = @goal.tasks.find_by(id: params[:id])
+      @task = Task.find_by(id: params[:id])
     end
 
-    def set_goal
-    @goal = Goal.find_by(id: params[:goal_id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
     def task_params
       params.require(:task).permit(:name, :completed)
     end

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Button, Card } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import TasksContainer from '../../containers/TasksContainer'
 
 
@@ -15,13 +14,17 @@ import TasksContainer from '../../containers/TasksContainer'
       return (
         <Card>
         <Card.Content>
-          <Card.Description>
-            {goal.title}
-          </Card.Description>
-        </Card.Content>
-        <Card.Content extra>
+          {goal.id}.
+          {goal.title}
+        <br/>
+          {goal.description}
+        <br/>
+        <br/>
           <button onClick={ () => this.handleClick() }>Delete Goal</button>
-          <TasksContainer goal={goal} />
+        </Card.Content>
+        <br/>
+        <Card.Content extra>
+          <TasksContainer goal={goal}/>
         </Card.Content>
       </Card>
 

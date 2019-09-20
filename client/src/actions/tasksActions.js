@@ -1,6 +1,7 @@
 
 //GOAL TASKS
 export const fetchGoalTasks = goalId => {
+  console.log('fetching goal tasks', goalId)
   return dispatch => {
     fetch(`/api/goals/${goalId}/tasks`)
       .then(response => response.json())
@@ -51,7 +52,7 @@ export const deleteTask = id => {
     }
   }
   return dispatch => {
-    fetch(`/tasks/${ id }`, data)
+    fetch(`/tasks/${id}`, data)
       .then(response => response.json())
       .then(task => dispatch({
         type: 'DELETE_TASK',

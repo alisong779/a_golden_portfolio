@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 
+
 class TaskInput extends Component {
   constructor() {
     super()
@@ -10,13 +11,14 @@ class TaskInput extends Component {
   }
   handleChange = (e) => {
     this.setState({
-      [e.target.id] : e.target.value
+      name : e.target.value
     })
   }
 
   handleOnSubmit = (e) => {
+    debugger
     e.preventDefault();
-    this.props.addTask({name: this.state.name, goalId: this.props.goalId});
+    this.props.addTask({taskInput: this.state.name, goalId: this.props.goal.id});
     this.setState({
       name: ''
     })
@@ -34,4 +36,5 @@ class TaskInput extends Component {
     )
   }
 }
-export default TaskInput;
+
+export default TaskInput

@@ -1,5 +1,6 @@
+//FETCH GOALS
 export const  fetchGoals = () => {
-  console.log('fetching')
+  console.log('fetching goals')
   return (dispatch) => {
     dispatch({type: 'LOADING_GOALS'})
       return fetch('/api/goals')
@@ -10,8 +11,10 @@ export const  fetchGoals = () => {
   }
 }
 
+//FETCH GOAL
+
 export const fetchGoal = id => {
-  console.log('fetching')
+  console.log('fetching goal')
   return (dispatch) => {
     dispatch({type: 'LOADING_GOALS'})
       return fetch(`/api/goals/${id}`)
@@ -22,8 +25,9 @@ export const fetchGoal = id => {
   }
 }
 
+//ADD GOAL
 export const addGoal = goalInput => {
-  console.log('adding')
+  console.log('adding goal')
   let data = {
     method: 'POST',
     headers: {
@@ -43,8 +47,9 @@ export const addGoal = goalInput => {
   }
 }
 
+//DELETE GOAL
 export const deleteGoal = goal_id =>{
-  console.log('deleting')
+  console.log('deleting goal')
   let data = {
     method: 'DELETE',
     headers: {

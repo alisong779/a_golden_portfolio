@@ -6,36 +6,39 @@ import Tasks from '../components/Tasks/Tasks';
 import TaskInput from '../components/Tasks/TaskInput';
 
 class TasksContainer extends Component {
+
   componentDidMount() {
-    this.props.fetchGoalTasks(this.props.goal.id)
     this.props.fetchGoal(this.props.goal.id)
+    // this.props.fetchGoal(this.props.goal.id)
   }
 
   render(){
-    const goalId = this.props.goal.id
     return(
       <div>
         <Tasks
           key={this.props.goal.id}
-          goalId={this.props.goal.id}
-          tasks={this.props.tasks}
+          tasks={this.props.goal.tasks}
           deleteTask={this.props.deleteTask}
         />
-      <TaskInput addTask={this.props.addTask} goalId={this.props.goal.id}/>
+      <TaskInput
+        goal={this.props.goal}
+        addTask={this.props.addTask}
+        />
       </div>
     )
   }
 }
 const mapStateToProps = state => ({
-  tasks: state.tasks.taskData,
-  goal: state.goals.goalData
+  tasks: state.tasks.tasksData
+  //
+  // goal: state.goals.goalsData
 })
 
-const mapDispatchToProps = dispatch => ({
-  fetchGoalTasks: goalId => dispatch(fetchGoalTasks(goalId)),
-  fetchGoal: goalId => dispatch(fetchGoal(goalId)),
-  addTask: (taskInput, goalId) => dispatch(addTask(taskInput, goalId)),
-  deleteTask: taskId => dispatch(deleteTask(taskId))
-})
+// const mapDispatchToProps = dispatch => ({
+//   fetchGoalTasks: goalId => dispatch(fetchGoalTasks(goalId)),
+//   fetchGoal: goalId => dispatch(fetchGoal(goalId)),
+//   addTask: (taskInput, goalId) => dispatch(addTask(taskInput, goalId)),
+//   deleteTask: taskId => dispatch(deleteTask(taskId))
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(TasksContainer);
+export default connect(mapStateToProps, { addTask, deleteTask, fetchGoalTasks, fetchGoal })(TasksContainer);
