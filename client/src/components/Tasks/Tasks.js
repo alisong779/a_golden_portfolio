@@ -5,11 +5,10 @@ import Task from './Task'
 
   class Tasks extends Component {
     render() {
-      const { tasks, deleteTask} = this.props
-      // const goalTasks = tasks.filter(task => task.goalId === goalId)
-      //
+      const { tasks } = this.props
+
       const taskList = tasks.map((task, index) => {
-        return <Task key={index} task={task} deleteTask={deleteTask} />
+        return <Task key={index} task={task} deleteTask={this.props.deleteTask} />
       })
 
       return (
@@ -20,6 +19,6 @@ import Task from './Task'
         </div>
       )
     }
-    }
+  }
 
 export default Tasks;

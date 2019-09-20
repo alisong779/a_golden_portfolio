@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addTask, deleteTask, fetchGoalTasks } from '../actions/tasksActions'
+import { addTask, deleteTask } from '../actions/tasksActions'
 import { connect } from 'react-redux'
 import { fetchGoal } from '../actions/goalsActions'
 import Tasks from '../components/Tasks/Tasks';
@@ -9,7 +9,6 @@ class TasksContainer extends Component {
 
   componentDidMount() {
     this.props.fetchGoal(this.props.goal.id)
-    // this.props.fetchGoal(this.props.goal.id)
   }
 
   render(){
@@ -30,8 +29,6 @@ class TasksContainer extends Component {
 }
 const mapStateToProps = state => ({
   tasks: state.tasks.tasksData
-  //
-  // goal: state.goals.goalsData
 })
 
 // const mapDispatchToProps = dispatch => ({
@@ -41,4 +38,4 @@ const mapStateToProps = state => ({
 //   deleteTask: taskId => dispatch(deleteTask(taskId))
 // })
 
-export default connect(mapStateToProps, { addTask, deleteTask, fetchGoalTasks, fetchGoal })(TasksContainer);
+export default connect(mapStateToProps, { addTask, deleteTask, fetchGoal })(TasksContainer);

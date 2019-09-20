@@ -16,9 +16,8 @@ class TaskInput extends Component {
   }
 
   handleOnSubmit = (e) => {
-    debugger
     e.preventDefault();
-    this.props.addTask({taskInput: this.state.name, goalId: this.props.goal.id});
+    this.props.addTask({name: this.state.name}, this.props.goal.id);
     this.setState({
       name: ''
     })
