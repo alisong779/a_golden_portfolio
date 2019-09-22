@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 import TasksContainer from '../../containers/TasksContainer'
 
 
@@ -12,22 +12,20 @@ import TasksContainer from '../../containers/TasksContainer'
       const { goal } = this.props
 
       return (
-        <Card>
-        <Card.Content>
-          {goal.id}.
-          {goal.title}
+        <Card >
+        <Card.Content >
+          <strong>Goal: {goal.title}</strong>
         <br/>
-          {goal.description}
+          Description: {goal.description}
         <br/>
         <br/>
-          <button onClick={ () => this.handleClick() }>Delete Goal</button>
+          <Button basic color='grey' size='mini' variant="primary" onClick={ () => this.handleClick() }>Delete Goal</Button>
         </Card.Content>
         <br/>
         <Card.Content extra>
           <TasksContainer goal={goal}/>
         </Card.Content>
       </Card>
-
       )
     }
   }

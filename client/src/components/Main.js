@@ -6,8 +6,7 @@ import Contact from './Portfolio/Contact'
 import Projects from './Portfolio/Projects'
 import Resume from './Portfolio/Resume'
 import Goals from './Goals/Goals'
-import { connect } from 'react-redux'
-import TasksContainer from '../containers/TasksContainer';
+
 
   class Main extends Component {
     render(){
@@ -18,11 +17,9 @@ import TasksContainer from '../containers/TasksContainer';
           <Route path="/contact" component={ Contact } />
           <Route path="/projects" component={ Projects } />
           <Route path="/resume" component={ Resume } />
-          <Route path="/goals" component={ Goals } />
-          <Route path="/goals/:id/tasks" component={ TasksContainer }/>
         </Switch>
       )
     }
   }
 
-export default connect()(Main)
+export default Main

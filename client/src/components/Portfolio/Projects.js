@@ -19,12 +19,12 @@ class Projects extends React.Component {
       return (
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Projects</CardTitle>
-            <CardText>
-              Added a Comments section to my Rails App that renders async JavaScript
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Project 1</CardTitle>
+            <CardText >
+              Rails Recipe Keeper app that renders async JavaScript comments section.
             </CardText>
             <CardActions border>
-              <Button href="https://github.com/alisong779/golden-recipes-2" colored>Github</Button>
+              <Button href="https://github.com/alisong779/golden-recipes-2" colored target="_blank">Github</Button>
             </CardActions>
           </Card>
         </div>
@@ -33,12 +33,12 @@ class Projects extends React.Component {
       return (
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Projects</CardTitle>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Project 1</CardTitle>
             <CardText>
-              Rails Recipe Keeper App
+              Rails Recipe Keeper App. User can create accounts, store recipes and view other users recipes.
             </CardText>
             <CardActions border>
-              <Button href="https://github.com/alisong779/golden_recipes" colored>Github</Button>
+              <Button href="https://github.com/alisong779/golden_recipes" colored target="_blank" >Github</Button>
             </CardActions>
           </Card>
         </div>
@@ -53,7 +53,7 @@ class Projects extends React.Component {
               Mauris sagittis pellentesque lacus eleifend lacinia...
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button colored target="_blank">Github</Button>
             </CardActions>
           </Card>
         </div>
@@ -68,7 +68,7 @@ class Projects extends React.Component {
               Mauris sagittis pellentesque lacus eleifend lacinia...
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button colored target="_blank">Github</Button>
             </CardActions>
           </Card>
         </div>
@@ -80,7 +80,7 @@ class Projects extends React.Component {
     return(
       <div className="category-tabs">
       <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId})} ripple>
-        <Tab>React</Tab>
+        <Tab>React / Redux</Tab>
         <Tab>JavaScript</Tab>
         <Tab>Ruby on Rails</Tab>
         <Tab>PHP</Tab>
@@ -97,6 +97,6 @@ class Projects extends React.Component {
     )
   }
 }
-//{this.toggleCategories()}
+
 
 export default Projects;

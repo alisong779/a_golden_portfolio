@@ -31,7 +31,7 @@ class GoalInput extends Component {
   render() {
     return(
       <Form className="new-goal-form" onSubmit={(e) =>this.handleSubmit(e)}>
-        <h1>Create New Goal</h1>
+        <h2 style={{fontSize: '50px', fontFamily: 'Big Shoulders Display'}}>React/Redux Goal Tracker</h2>
         <Form.Field>
           <label className="form-label">Goal Title</label>
           <input
@@ -49,7 +49,7 @@ class GoalInput extends Component {
             onChange={this.handleChange} />
         </Form.Field>
 
-        <Button type="submit">Add Goal</Button>
+        <Button basic color='purple' type="submit">Add Goal</Button>
       </Form>
 
     )

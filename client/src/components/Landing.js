@@ -8,11 +8,11 @@ class Landing extends React.Component {
         <Grid className="landing-grid">
           <Cell col={12}>
             <img
-              src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993_960_720.png"
+              src="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_1280.png"
               alt="avatar"
               className="avatar-image"
               />
-            <h2>Alison Golden</h2>
+            <h2 style={{fontSize: '50px', fontFamily: 'Mansalva'}}>Alison Golden</h2>
             <div className="banner-text">
               <h1>Full Stack Web Developer</h1>
               <hr/>

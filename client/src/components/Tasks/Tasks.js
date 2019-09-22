@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Task from './Task'
 
 
-
   class Tasks extends Component {
     render() {
       const { tasks } = this.props

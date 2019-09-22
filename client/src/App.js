@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from './components/Main'
 import { NavLink } from 'react-router-dom';
-import { Layout, Header, Navigation, Content } from 'react-mdl'
+import { Layout, Drawer, Header, Navigation, Content } from 'react-mdl'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -22,8 +22,8 @@ class App extends Component {
         <Content>
             <Main />
         </Content>
-    </Layout>
-      </div>
+      </Layout>
+    </div>
     );
   }
   }

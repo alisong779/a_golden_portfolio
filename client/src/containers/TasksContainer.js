@@ -14,16 +14,18 @@ class TasksContainer extends Component {
   render(){
     return(
       <div>
+        <TaskInput
+          goal={this.props.goal}
+          addTask={this.props.addTask}
+          />
+
+        <strong>Tasks:</strong>
         <Tasks
           key={this.props.goal.id}
           tasks={this.props.goal.tasks}
           deleteTask={this.props.deleteTask}
         />
-      <TaskInput
-        goal={this.props.goal}
-        addTask={this.props.addTask}
-        />
-      </div>
+        </div>
     )
   }
 }
@@ -31,11 +33,5 @@ const mapStateToProps = state => ({
   tasks: state.tasks.tasksData
 })
 
-// const mapDispatchToProps = dispatch => ({
-//   fetchGoalTasks: goalId => dispatch(fetchGoalTasks(goalId)),
-//   fetchGoal: goalId => dispatch(fetchGoal(goalId)),
-//   addTask: (taskInput, goalId) => dispatch(addTask(taskInput, goalId)),
-//   deleteTask: taskId => dispatch(deleteTask(taskId))
-// })
 
 export default connect(mapStateToProps, { addTask, deleteTask, fetchGoal })(TasksContainer);

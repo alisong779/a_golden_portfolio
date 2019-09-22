@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
+import Task from './Task'
 
 
 class TaskInput extends Component {
@@ -30,7 +31,8 @@ class TaskInput extends Component {
          <label className="form-label">Add Task</label>
          <input id="name" required value={this.state.name} onChange={(e) =>this.handleChange(e)} />
        </Form.Field>
-       <Button type="submit">Add Task</Button>
+       <Button basic color='purple' type="submit">Add Task</Button>
+       <hr/>
      </Form>
     )
   }

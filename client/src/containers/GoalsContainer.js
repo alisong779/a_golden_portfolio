@@ -29,10 +29,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-// 
-// const mapDispatchToProps = dispatch => ({
-//   fetchGoals: () => dispatch(fetchGoals()),
-//   deleteGoal: id => dispatch(deleteGoal(id))
-// })
-
 export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);

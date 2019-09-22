@@ -1,5 +1,3 @@
-
-
 //ADD TASK
 
 export const addTask = ( task, id ) => {
