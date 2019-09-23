@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
-import Task from './Task'
+import { connect } from 'react-redux'
+import { fetchGoals } from '../../actions/goalsActions'
 
 
 class TaskInput extends Component {
@@ -12,13 +13,15 @@ class TaskInput extends Component {
   }
   handleChange = (e) => {
     this.setState({
-      name : e.target.value
+      name: e.target.value
     })
   }
 
-  handleOnSubmit = (e) => {
-    e.preventDefault();
-    this.props.addTask({name: this.state.name}, this.props.goal.id);
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.addTask({name: this.state.name}, this.props.goal.id)
+
+    // this.props.fetchGoals()
     this.setState({
       name: ''
     })
@@ -26,10 +29,10 @@ class TaskInput extends Component {
 
   render() {
     return (
-      <Form className="new-task-form" onSubmit={(e) =>this.handleOnSubmit(e)}>
+      <Form className="new-task-form" onSubmit={(e) =>this.handleSubmit(e)}>
        <Form.Field>
          <label className="form-label">Add Task</label>
-         <input id="name" required value={this.state.name} onChange={(e) =>this.handleChange(e)} />
+         <input id="name" required value={this.state.name} onChange={(e) => this.handleChange(e)} />
        </Form.Field>
        <Button basic color='purple' type="submit">Add Task</Button>
        <hr/>
@@ -38,4 +41,4 @@ class TaskInput extends Component {
   }
 }
 
-export default TaskInput
+export default connect(null, { fetchGoals })(TaskInput)

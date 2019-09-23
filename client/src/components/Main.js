@@ -5,7 +5,6 @@ import About from './Portfolio/About'
 import Contact from './Portfolio/Contact'
 import Projects from './Portfolio/Projects'
 import Resume from './Portfolio/Resume'
-import Goals from './Goals/Goals'
 
 
   class Main extends Component {

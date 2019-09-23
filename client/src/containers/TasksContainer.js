@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { addTask, deleteTask } from '../actions/tasksActions'
+import { deleteTask } from '../actions/tasksActions'
+import { addTask } from '../actions/goalsActions'
 import { connect } from 'react-redux'
 import { fetchGoal } from '../actions/goalsActions'
 import Tasks from '../components/Tasks/Tasks';
@@ -24,13 +25,14 @@ class TasksContainer extends Component {
           key={this.props.goal.id}
           tasks={this.props.goal.tasks}
           deleteTask={this.props.deleteTask}
+          goal={this.props.goal}
         />
         </div>
     )
   }
 }
 const mapStateToProps = state => ({
-  tasks: state.tasks.tasksData
+  goals: state.goals
 })
 
 

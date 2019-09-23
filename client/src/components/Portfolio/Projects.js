@@ -2,6 +2,7 @@ import React from 'react'
 import GoalsContainer from '../../containers/GoalsContainer'
 import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button } from 'react-mdl'
 
+
 class Projects extends React.Component {
   constructor(props){
     super(props)
@@ -99,4 +100,4 @@ class Projects extends React.Component {
 }
 
 
-export default Projects;
+export default Projects

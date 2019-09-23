@@ -17,6 +17,7 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
           <GoalInput />
           <br/>
           <hr/>
+          {console.log(this.props.goals)}
           <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/>
         </Container>
       )
@@ -24,9 +25,9 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
   }
 
 const mapStateToProps = (state) => {
-  return {
-    goals: state.goals.goalsData
-  }
+  return ({
+    goals: state.goalReducer.goals
+  })
 }
 
 export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);

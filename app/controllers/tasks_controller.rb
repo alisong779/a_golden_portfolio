@@ -18,7 +18,7 @@ class TasksController < ApplicationController
   def create
     @goal = Goal.find(params[:goal_id])
     @task = @goal.tasks.create(task_params)
-    render json: @task, status: :created
+    render json: @goal, status: :created
   end
 
   # PATCH/PUT /tasks/1
@@ -38,9 +38,6 @@ class TasksController < ApplicationController
   end
 
   private
-    # def set_task
-    #   @task = @goal.tasks.find_by(id: params[:id])
-    # end
 
     def task_params
       params.require(:task).permit(:name, :completed)

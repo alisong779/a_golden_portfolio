@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Main from './components/Main'
 import { NavLink } from 'react-router-dom';
-import { Layout, Drawer, Header, Navigation, Content } from 'react-mdl'
+import { Layout, Header, Navigation, Content } from 'react-mdl'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -26,6 +26,6 @@ class App extends Component {
     </div>
     );
   }
-  }
+}
 
 export default connect()(App)

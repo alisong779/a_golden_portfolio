@@ -1,6 +1,7 @@
 //ADD TASK
 
-export const addTask = ( task, id ) => {
+export const addTask = ( task, goal ) => {
+  console.log('adding task')
   let data = {
     method: 'POST',
     headers: {
@@ -10,18 +11,22 @@ export const addTask = ( task, id ) => {
     body: JSON.stringify(task)
   }
   return dispatch => {
-    fetch(`/api/goals/${id}/tasks`, data)
+    fetch(`/api/goals/${goal.id}/tasks`, data)
       .then(response => response.json())
       .then(task => {
-        let result = {task, id}
-        dispatch({type: 'CREATE_TASK', payload: result})
+        let result = {task, goal}
+        dispatch({
+          type: 'CREATE_TASK',
+          payload: result
+        })
       })
       .catch(err => err)
   }
 }
 
 //DELETE TASK
-export const deleteTask = ( goalId, id ) => {
+export const deleteTask = ( task, goal ) => {
+  console.log('deleting task')
   let data = {
     method: 'DELETE',
     headers: {
@@ -30,34 +35,15 @@ export const deleteTask = ( goalId, id ) => {
     }
   }
   return dispatch => {
-    fetch(`api/goals/${goalId}/tasks/${id}`, data)
+    fetch(`api/goals/${goal.id}/tasks/${task.id}`, data)
       .then(response => response.json())
-      .then(task => dispatch({
+      .then(task => {
+        let result = {task, goal}
+        dispatch({
         type: 'DELETE_TASK',
-        payload: task
-      }))
-      .catch(err => err)
-  }
+        payload: result
+      })
+  })
+    .catch(err => err)
 }
-
-
-//
-// //GOAL TASKS
-// export const fetchGoalTasks = goalId => {
-//   console.log('fetching goal tasks', goalId)
-//   return dispatch => {
-//     fetch(`/api/goals/${goalId}/tasks`)
-//       .then(response => response.json())
-//       .then(tasks => {
-//         let result = {
-//           tasks,
-//           goalId
-//         }
-//         dispatch({
-//             type: 'FETCH_TASKS',
-//             payload: result
-//         })
-//       })
-//       .catch(err => err)
-//   }
-// }
+}
