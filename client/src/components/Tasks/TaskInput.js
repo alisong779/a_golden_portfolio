@@ -21,7 +21,6 @@ class TaskInput extends Component {
     e.preventDefault()
     this.props.addTask({name: this.state.name}, this.props.goal.id)
 
-    // this.props.fetchGoals()
     this.setState({
       name: ''
     })

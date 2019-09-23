@@ -11,7 +11,7 @@ const Task = ({ task, deleteTask, goal }) => {
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <Button basic color='grey' size='mini' variant="primary" onClick={() => deleteTask(goal.id, task.id)}>Delete</Button>
+      <Button basic color='grey' size='mini' variant="primary" onClick={() => deleteTask(task.id, goal.id)}>Delete</Button>
     </Card.Content>
   </Card>
   )
