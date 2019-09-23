@@ -17,7 +17,6 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
           <GoalInput />
           <br/>
           <hr/>
-          {console.log(this.props.goals)}
           <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/>
         </Container>
       )
