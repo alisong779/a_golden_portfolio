@@ -18,7 +18,7 @@ class TasksController < ApplicationController
   def create
     @goal = Goal.find(params[:goal_id])
     @task = @goal.tasks.create(task_params)
-    render json: @goal, status: :created
+    render json: @task, status: :created
   end
 
   # PATCH/PUT /tasks/1

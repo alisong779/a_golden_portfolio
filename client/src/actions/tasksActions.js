@@ -11,7 +11,7 @@ export const addTask = ( task, goal ) => {
     body: JSON.stringify(task)
   }
   return dispatch => {
-    fetch(`/api/goals/${goal}/tasks`, data)
+    fetch(`/api/goals/${goal.id}/tasks`, data)
       .then(response => response.json())
       .then(task => {
         let result = {task, goal}
@@ -35,7 +35,7 @@ export const deleteTask = ( task, goal ) => {
     }
   }
   return dispatch => {
-    fetch(`api/goals/${goal}/tasks/${task}`, data)
+    fetch(`api/goals/${goal.id}/tasks/${task.id}`, data)
       .then(response => response.json())
       .then(task => {
         let result = {task, goal}

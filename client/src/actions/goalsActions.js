@@ -67,27 +67,3 @@ export const deleteGoal = goal_id =>{
       .catch(err => err)
   }
 }
-
-export const addTask = ( task, id ) => {
-  console.log('adding task')
-  let data = {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(task)
-  }
-  return dispatch => {
-    fetch(`/api/goals/${id}/tasks`, data)
-      .then(response => response.json())
-      .then(goal => {
-// let result = {task, id}
-        dispatch({
-          type: 'CREATE_TASK',
-          payload: goal
-        })
-      })
-      .catch(err => err)
-  }
-}

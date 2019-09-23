@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { deleteTask } from '../actions/tasksActions'
-import { addTask } from '../actions/goalsActions'
+import { addTask, deleteTask } from '../actions/tasksActions'
 import { connect } from 'react-redux'
 import { fetchGoal } from '../actions/goalsActions'
 import Tasks from '../components/Tasks/Tasks';
@@ -32,7 +31,7 @@ class TasksContainer extends Component {
   }
 }
 const mapStateToProps = state => ({
-  goals: state.goals
+  goals: state.goalReducer.goals
 })
 
 
