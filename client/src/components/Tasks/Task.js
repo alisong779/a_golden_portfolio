@@ -1,10 +1,9 @@
 import React from 'react';
-import { Button, Card, Grid } from 'semantic-ui-react';
+import { Button, Card } from 'semantic-ui-react';
 
 
 const Task = ({ task, deleteTask, goal }) => {
   return(
-
     <Card>
     <Card.Content>
       <Card.Description>
@@ -15,7 +14,6 @@ const Task = ({ task, deleteTask, goal }) => {
       <Button basic color='grey' size='mini' variant="primary" onClick={() => deleteTask(task, goal)}>Delete</Button>
     </Card.Content>
   </Card>
-
   )
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import { fetchGoals } from '../../actions/goalsActions'
+import { addTask } from '../../actions/tasksActions'
 
 
 class TaskInput extends Component {
@@ -19,7 +19,6 @@ class TaskInput extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    debugger
     this.props.addTask({name: this.state.name}, this.props.goal)
 
     this.setState({
@@ -41,4 +40,4 @@ class TaskInput extends Component {
   }
 }
 
-export default connect(null, { fetchGoals })(TaskInput)
+export default connect(null, { addTask })(TaskInput)

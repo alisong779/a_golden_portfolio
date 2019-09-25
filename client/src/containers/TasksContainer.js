@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addTask, deleteTask } from '../actions/tasksActions'
+import { deleteTask } from '../actions/tasksActions'
 import { connect } from 'react-redux'
 import { fetchGoal } from '../actions/goalsActions'
 import Tasks from '../components/Tasks/Tasks';
@@ -16,7 +16,6 @@ class TasksContainer extends Component {
       <div>
         <TaskInput
           goal={this.props.goal}
-          addTask={this.props.addTask}
           />
 
         <strong>Tasks:</strong>
@@ -35,4 +34,4 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps, { addTask, deleteTask, fetchGoal })(TasksContainer);
+export default connect(mapStateToProps, { deleteTask, fetchGoal })(TasksContainer);

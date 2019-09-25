@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button, Grid } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 import TasksContainer from '../../containers/TasksContainer'
 import { connect } from 'react-redux'
 
@@ -13,7 +13,6 @@ import { connect } from 'react-redux'
       const { goal } = this.props
 
       return (
-
             <Card >
               <Card.Content >
                 <strong>Goal: {goal.title}</strong>
@@ -27,8 +26,8 @@ import { connect } from 'react-redux'
               <Card.Content extra>
                 <TasksContainer goal={goal}/>
               </Card.Content>
+              <br></br>
             </Card>
-        
       )
     }
   }

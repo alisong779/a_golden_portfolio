@@ -50,8 +50,7 @@ class Projects extends React.Component {
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>PHP Projects</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Mauris sagittis pellentesque lacus eleifend lacinia...
+              PHP Projects to come......
             </CardText>
             <CardActions border>
               <Button colored target="_blank">Github</Button>
@@ -65,8 +64,7 @@ class Projects extends React.Component {
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>HTML/CSS Projects</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Mauris sagittis pellentesque lacus eleifend lacinia...
+              HTML/CSS Projects to come...
             </CardText>
             <CardActions border>
               <Button colored target="_blank">Github</Button>
