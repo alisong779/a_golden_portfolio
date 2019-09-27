@@ -10,18 +10,18 @@ class App extends Component {
     return (
       <div className="demo-big-content">
         <Layout>
-        <Header className="header-color" title="A. Golden Portfolio" scroll>
-            <Navigation>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-                <NavLink to="/resume">Resume</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-            </Navigation>
-        </Header>
-        <Content>
-            <Main />
-        </Content>
+          <Header className="header-color" title="A. Golden Portfolio" scroll>
+              <Navigation>
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/about">About</NavLink>
+                  <NavLink to="/contact">Contact</NavLink>
+                  <NavLink to="/resume">Resume</NavLink>
+                  <NavLink to="/projects">Projects</NavLink>
+              </Navigation>
+          </Header>
+          <Content>
+              <Main />
+          </Content>
       </Layout>
     </div>
     );

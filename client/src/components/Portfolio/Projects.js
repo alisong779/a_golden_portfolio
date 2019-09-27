@@ -28,6 +28,16 @@ class Projects extends React.Component {
               <Button href="https://github.com/alisong779/golden-recipes-2" colored target="_blank">Github</Button>
             </CardActions>
           </Card>
+
+          <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Project 2</CardTitle>
+            <CardText >
+              New JavaScript project
+            </CardText>
+            <CardActions border>
+              <Button href="" colored target="_blank">Github</Button>
+            </CardActions>
+          </Card>
         </div>
       )
     }else if(this.state.activeTab === 2){
@@ -40,6 +50,16 @@ class Projects extends React.Component {
             </CardText>
             <CardActions border>
               <Button href="https://github.com/alisong779/golden_recipes" colored target="_blank" >Github</Button>
+            </CardActions>
+          </Card>
+
+          <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Project 2</CardTitle>
+            <CardText>
+              New Rails application
+            </CardText>
+            <CardActions border>
+              <Button href="" colored target="_blank" >Github</Button>
             </CardActions>
           </Card>
         </div>
