@@ -12,9 +12,9 @@ class Goals extends Component {
       )
   })
     return (
-
+      
       <ul>
-        <h2 style={{fontSize: '50px', fontFamily: 'Big Shoulders Display'}}>Goals List:</h2>
+        <h2 class="goalIndex">Goals List:</h2>
         {goalsIndex}
       </ul>
 

@@ -165,3 +165,9 @@ padding-top: 2em;
   text-align: center;
   background-color: #f1f1f1;
 }
+
+h2.goalIndex {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Big Shoulders Display', sans-serif
+}
