@@ -30,8 +30,8 @@ class TaskInput extends Component {
     return (
       <Form className="new-task-form" onSubmit={(e) =>this.handleSubmit(e)}>
        <Form.Field>
-         <label className="form-label">Add Task</label>
-         <input id="name" required value={this.state.name} onChange={(e) => this.handleChange(e)} />
+         <label className="form-label">Add Task:</label>
+         <input placeholder="Add a new goal task..." id="name" required value={this.state.name} onChange={(e) => this.handleChange(e)} />
        </Form.Field>
        <Button basic color='purple' type="submit">Add Task</Button>
        <hr/>
