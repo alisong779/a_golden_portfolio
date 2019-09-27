@@ -18,7 +18,7 @@ class TasksContainer extends Component {
           goal={this.props.goal}
           />
 
-        <strong>Tasks:</strong>
+        <strong>Goal Tasks:</strong>
         <Tasks
           key={this.props.goal.id}
           tasks={this.props.goal.tasks}
@@ -29,9 +29,9 @@ class TasksContainer extends Component {
     )
   }
 }
-const mapStateToProps = state => ({
-  goals: state.goalReducer.goals
-})
+// const mapStateToProps = state => ({
+//   goals: state.goalReducer.goals
+// })
 
 
-export default connect(mapStateToProps, { deleteTask, fetchGoal })(TasksContainer);
+export default connect(null, { deleteTask, fetchGoal })(TasksContainer);

@@ -13,7 +13,8 @@ import { connect } from 'react-redux'
       const { goal } = this.props
 
       return (
-            <Card >
+        <div className="projects-grid">
+            <Card shadow={0} style={{width: '400px', margin: 'auto'}}>
               <Card.Content >
                 <strong>Goal: {goal.title}</strong>
                 <br/>
@@ -27,10 +28,12 @@ import { connect } from 'react-redux'
                 <TasksContainer goal={goal}/>
               </Card.Content>
               <br></br>
-            </Card>
+          </Card>
+        </div>
       )
     }
   }
+
 
   const mapStateToProps = (state) => ({
     goals: state.goals
