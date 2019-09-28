@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Container } from 'semantic-ui-react';
 import Goals from '../components/Goals/Goals'
 import GoalInput from '../components/Goals/GoalInput'
-import { fetchGoals, deleteGoal } from '../actions/goalsActions'
+import { fetchGoals } from '../actions/goalsActions'
 
 
   class GoalsContainer extends Component {
@@ -17,7 +17,7 @@ import { fetchGoals, deleteGoal } from '../actions/goalsActions'
           <GoalInput />
           <br/>
           <hr/>
-          <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal}/>
+          <Goals goals={this.props.goals} />
         </Container>
       )
     }
@@ -29,4 +29,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, { fetchGoals, deleteGoal })(GoalsContainer);
+export default connect(mapStateToProps, { fetchGoals })(GoalsContainer);

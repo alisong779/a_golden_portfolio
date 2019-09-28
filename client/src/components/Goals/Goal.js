@@ -36,11 +36,8 @@ import { deleteGoal } from '../../actions/goalsActions'
       )
     }
   }
-
-
   // const mapStateToProps = (state) => ({
   //   goals: state.goals
   // })
-
-
+  
 export default connect(null, { deleteGoal })(Goal);
