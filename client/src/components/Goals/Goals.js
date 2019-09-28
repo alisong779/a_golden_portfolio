@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Goal from './Goal'
 
-
 class Goals extends Component {
   render() {
     const { goals } = this.props
@@ -19,4 +18,5 @@ class Goals extends Component {
     )
   }
 }
+
 export default Goals;

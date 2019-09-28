@@ -29,9 +29,6 @@ class TasksContainer extends Component {
     )
   }
 }
-// const mapStateToProps = state => ({
-//   goals: state.goalReducer.goals
-// })
 
 
 export default connect(null, { deleteTask, fetchGoal })(TasksContainer);
