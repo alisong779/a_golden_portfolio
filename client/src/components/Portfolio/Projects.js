@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import GoalsContainer from '../../containers/GoalsContainer'
 import { Tabs, Tab, Grid, Cell, Card, CardText, CardTitle, CardActions, Button } from 'react-mdl'
 
 
-class Projects extends React.Component {
+class Projects extends Component {
   constructor(props){
     super(props)
-    this.state = { activeTab: 0 }
+    this.state = {
+      activeTab: 0
+    }
   }
 
   toggleCategories(){
@@ -21,9 +23,9 @@ class Projects extends React.Component {
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Project 1</CardTitle>
-            <CardText >
-              Rails Recipe Keeper app that renders async JavaScript comments section.
-            </CardText>
+              <CardText >
+                Rails Recipe Keeper app that renders async JavaScript comments section.
+              </CardText>
             <CardActions border>
               <Button href="https://github.com/alisong779/golden-recipes-2" colored target="_blank">Github</Button>
             </CardActions>
@@ -31,9 +33,9 @@ class Projects extends React.Component {
 
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://uploads.toptal.io/blog/image/125783/toptal-blog-image-1522333595770-14ba14a2f6099482fa9189f8764dd5ad.png) center / cover'}}>JavaScript Project 2</CardTitle>
-            <CardText >
-              New JavaScript project
-            </CardText>
+              <CardText >
+                New JavaScript project
+              </CardText>
             <CardActions border>
               <Button href="" colored target="_blank">Github</Button>
             </CardActions>
@@ -45,9 +47,9 @@ class Projects extends React.Component {
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Project 1</CardTitle>
-            <CardText>
-              Rails Recipe Keeper App. User can create accounts, store recipes and view other users recipes.
-            </CardText>
+              <CardText>
+                Rails Recipe Keeper App. User can create accounts, store recipes and view other users recipes.
+              </CardText>
             <CardActions border>
               <Button href="https://github.com/alisong779/golden_recipes" colored target="_blank" >Github</Button>
             </CardActions>
@@ -55,9 +57,9 @@ class Projects extends React.Component {
 
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/assets/tutorials/images/large/ruby-on-rails.jpg?1565909621) center / cover'}}>Ruby on Rails Project 2</CardTitle>
-            <CardText>
-              New Rails application
-            </CardText>
+              <CardText>
+                New Rails application
+              </CardText>
             <CardActions border>
               <Button href="" colored target="_blank" >Github</Button>
             </CardActions>
@@ -69,9 +71,9 @@ class Projects extends React.Component {
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>PHP Projects</CardTitle>
-            <CardText>
-              PHP Projects to come......
-            </CardText>
+              <CardText>
+                PHP Projects to come......
+              </CardText>
             <CardActions border>
               <Button colored target="_blank">Github</Button>
             </CardActions>
@@ -83,9 +85,9 @@ class Projects extends React.Component {
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>HTML/CSS Projects</CardTitle>
-            <CardText>
-              HTML/CSS Projects to come...
-            </CardText>
+              <CardText>
+                HTML/CSS Projects to come...
+              </CardText>
             <CardActions border>
               <Button colored target="_blank">Github</Button>
             </CardActions>
@@ -98,13 +100,13 @@ class Projects extends React.Component {
   render () {
     return(
       <div className="category-tabs">
-      <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId})} ripple>
-        <Tab>React / Redux</Tab>
-        <Tab>JavaScript</Tab>
-        <Tab>Ruby on Rails</Tab>
-        <Tab>PHP</Tab>
-        <Tab>HTML/CSS</Tab>
-      </Tabs>
+        <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId})} ripple>
+          <Tab>React / Redux</Tab>
+          <Tab>JavaScript</Tab>
+          <Tab>Ruby on Rails</Tab>
+          <Tab>PHP</Tab>
+          <Tab>HTML/CSS</Tab>
+        </Tabs>
 
         <Grid>
           <Cell col={12}>
