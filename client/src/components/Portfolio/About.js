@@ -1,8 +1,7 @@
 import React from 'react'
 import { Grid, Cell } from 'react-mdl';
 
-class About extends React.Component {
-  render () {
+  export const About = (props) => {
     return(
       <div className="about-body">
         <Grid className="about-grid">
@@ -25,7 +24,6 @@ class About extends React.Component {
         </Grid>
       </div>
     )
-  }
 }
 
 export default About;

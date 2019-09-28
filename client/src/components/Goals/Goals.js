@@ -12,12 +12,10 @@ class Goals extends Component {
       )
   })
     return (
-
       <ul>
         <h2 class="goalIndex">Goals List:</h2>
         {goalsIndex}
       </ul>
-
     )
   }
 }
