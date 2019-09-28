@@ -8,7 +8,7 @@ class Goals extends Component {
 
     const goalsIndex = goals.map(goal => {
       return (
-        <Goal key={goal.id} goal={goal} deleteGoal={deleteGoal}/>
+        <Goal key={goal.id} goal={goal} />
       )
   })
     return (

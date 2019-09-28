@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button, Grid } from 'semantic-ui-react';
 import TasksContainer from '../../containers/TasksContainer'
 import { connect } from 'react-redux'
+import { deleteGoal } from '../../actions/goalsActions'
 
 
   class Goal extends Component {
@@ -37,9 +38,9 @@ import { connect } from 'react-redux'
   }
 
 
-  const mapStateToProps = (state) => ({
-    goals: state.goals
-  })
+  // const mapStateToProps = (state) => ({
+  //   goals: state.goals
+  // })
 
 
-export default connect(mapStateToProps)(Goal);
+export default connect(null, { deleteGoal })(Goal);
