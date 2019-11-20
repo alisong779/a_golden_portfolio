@@ -14,10 +14,9 @@ import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
                 style={{height: '300px'}}
                  />
                <p style={{ width: '75%', margin: 'auto', paddingTop: '1em'}}>
-                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                 when an unknown printer took a galley of type and scrambled it to make a type
-                 specimen book. It has survived not only five centuries</p>
+                 I recently graduated from Flatiron School with a Full Stack Software Engineering Certification.
+                 Im currently avaiable and looking for new opportunities. Please reach out to let me know how I
+                 can help you succeed on your next project!</p>
           </Cell>
           <Cell col={6}>
             <h2>Contact Me</h2>
@@ -27,13 +26,13 @@ import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
                   <ListItem>
                     <ListItemContent style={{fontSize: '30px', fontFamily: 'Big Shoulders Display'}}>
                       <i className="fa fa-phone-square" aria-hidden="true"/>
-                      (123) 456-7890
+                      (772) 696-2086
                     </ListItemContent>
                   </ListItem>
                   <ListItem>
                     <ListItemContent style={{fontSize: '30px', fontFamily: 'Big Shoulders Display'}}>
                       <i className="fa fa-envelope" aria-hidden="true"/>
-                      someone@example.com
+                      alisong779@yahoo.com
                     </ListItemContent>
                   </ListItem>
                   <ListItem>

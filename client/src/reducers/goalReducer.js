@@ -2,7 +2,6 @@ let newGoal
 export default function goalReducer(state = {
   goals: [],
   loading: false
-
 }, action) {
   switch(action.type){
         case 'CREATE_GOAL':

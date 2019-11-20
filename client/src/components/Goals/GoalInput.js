@@ -9,7 +9,8 @@ class GoalInput extends Component {
     super()
     this.state = {
       title: "",
-      description: ""
+      description: "",
+      count: 0
     }
   }
 
@@ -19,7 +20,7 @@ class GoalInput extends Component {
     })
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.addGoal(this.state);
     this.setState({
@@ -30,7 +31,7 @@ class GoalInput extends Component {
 
   render() {
     return(
-      <Form className="new-goal-form" onSubmit={(e) =>this.handleSubmit(e)}>
+      <Form className="new-goal-form" onSubmit={this.handleSubmit}>
         <h2 style={{fontSize: '50px', fontFamily: 'Big Shoulders Display'}}>React/Redux Goal Tracker</h2>
         <Form.Field>
           <label className="form-label">Goal Title</label>

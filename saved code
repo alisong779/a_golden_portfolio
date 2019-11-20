@@ -165,3 +165,50 @@ class Tasks extends Component {
     text-align: center;
     background-color: #f1f1f1;
   }
+  -----------------
+
+  // const Task = ({ task, deleteTask, goal }) => {
+  //   return(
+  //     <Card>
+  //       <Card.Content>
+  //         <Card.Description>
+  //           {task.name}
+  //         </Card.Description>
+  //       </Card.Content>
+  //       <Card.Content extra>
+  //         <Button basic color='grey' size='mini' variant="primary" onClick={() => deleteTask(task, goal)}>Delete</Button>
+  //       </Card.Content>
+  //     </Card>
+  //   )
+  // }
+  -------------
+  
+  increment = () => {
+    // this.setState({
+    //   count: this.state.count + 1
+    // })
+    console.log('a')
+
+    fetch('/api/goalsjklfds')
+      .then(response => {
+        console.log('b')
+        if(response.status != 200) {
+          throw new Error(response.statusText)
+        } else {
+          return response.json()
+        }
+      })
+      .then(goals => {
+        console.log('c', goals)
+        // dispatch({
+        // type: 'FETCH_GOALS',
+        // payload: goals})
+      })
+      .catch(errors => console.log('d', errors))
+      console.log('e')
+    // a e b d
+  }
+
+
+  <Button onClick={this.increment}>Click Me</Button>
+  {this.state.count}

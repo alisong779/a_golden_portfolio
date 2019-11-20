@@ -84,12 +84,12 @@ class Projects extends Component {
       return(
         <div className="projects-grid">
           <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>HTML/CSS Projects</CardTitle>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://i.udemycdn.com/course/750x422/792484_cc98_3.jpg) center / cover'}}>HTML/CSS Projects</CardTitle>
               <CardText>
-                HTML/CSS Projects to come...
+                A fully responsive Portfolio website using HTML 5, CSS 3, Sass, and Javascript
               </CardText>
             <CardActions border>
-              <Button colored target="_blank">Github</Button>
+              <Button href="https://github.com/alisong779/Resposive-Portfolio-Website" colored target="_blank">Github</Button>
             </CardActions>
           </Card>
         </div>

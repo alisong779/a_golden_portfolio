@@ -1,5 +1,4 @@
 //ADD TASK
-
 export const addTask = ( task, goal ) => {
   console.log('adding task')
   let data = {

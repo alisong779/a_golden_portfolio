@@ -12,7 +12,6 @@ export const  fetchGoals = () => {
 }
 
 //FETCH GOAL
-
 export const fetchGoal = id => {
   console.log('fetching goal')
   return (dispatch) => {
