@@ -11,7 +11,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'foreman'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'pry'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
